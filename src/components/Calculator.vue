@@ -1,4 +1,3 @@
-import MenuIcon from 'vue-material-design-icons/Menu.vue';
 <template>
   <div>
     <div class="display-input">
@@ -22,8 +21,7 @@ import MenuIcon from 'vue-material-design-icons/Menu.vue';
         <tr v-for="(leftPad, index) in leftKeyPads" :key="index">
           <td v-for="pad in leftPad.keys"
               :key="pad.num"
-              :colspan="pad.isLarge ? 2 : 1"
-              @click="handlePress(pad)" >
+              :colspan="pad.isLarge ? 2 : 1" >
             <div class="num-pad">
               <div class="num" :class="pad.class" v-html="pad.num"></div>
             </div>
@@ -54,7 +52,6 @@ import MenuIcon from 'vue-material-design-icons/Menu.vue';
 import HistoryIcon from 'vue-material-design-icons/History.vue';
 import stringMath from 'string-math';
 export default {
-
   name: "Calculator.vue",
   components: {HistoryIcon},
   data: function() {
@@ -88,7 +85,6 @@ export default {
         },{
           class: 'operator symbol',
           num: '÷',
-          value: '/'
         }]
       }, {
         keys: [{
@@ -103,7 +99,6 @@ export default {
         },{
           class: 'operator symbol',
           num: 'x',
-          value: '*'
         }]
       }, {
         keys: [{
